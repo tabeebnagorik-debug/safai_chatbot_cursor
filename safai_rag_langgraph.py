@@ -33,7 +33,7 @@ retriever = vector_store.as_retriever(
 )
 
 # Reading system prompt
-with open("system_prompt_2.txt", "r", encoding="utf-8") as f:
+with open("system_prompt.txt", "r", encoding="utf-8") as f:
     system_template = f.read().strip()
 
 # Creating Prompt Template
