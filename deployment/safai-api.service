@@ -1,0 +1,23 @@
+[Unit]
+Description=Safai AI Chat Agent API
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=hutch_prod
+Group=hutch_prod
+WorkingDirectory=/var/www/ai-chat-agent
+Environment="PATH=/home/hutch_prod/.local/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="UV_PROJECT_ENVIRONMENT=/var/www/ai-chat-agent/.venv"
+ExecStart=/home/hutch_prod/.local/bin/uv run fastapi run main.py --host 127.0.0.1 --port 8990
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,21 @@
+[project]
+name = "ai-chat-agent"
+version = "0.1.0"
+description = "FastAPI REST API for Safai's AI Customer Support Assistant powered by LangGraph and RAG"
+requires-python = ">=3.12.10"
+dependencies = [
+    "fastapi[standard]>=0.121.0",
+    "langchain-chroma>=1.0.0",
+    "langchain-community>=0.4.1",
+    "langchain-core>=1.0.3",
+    "langchain-openai>=1.0.2",
+    "langchain-text-splitters>=1.0.0",
+    "langgraph>=1.0.2",
+    "langgraph-checkpoint-postgres>=3.0.0",
+    "psycopg[binary]>=3.2.12",
+    "pydantic>=2.12.3",
+    "python-dotenv>=1.2.1",
+    "sqlalchemy>=2.0.44",
+    "streamlit>=1.51.0",
+    "uvicorn>=0.38.0",
+]
